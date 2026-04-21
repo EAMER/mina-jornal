@@ -1,0 +1,57 @@
+{
+  "batch_id": "payout-2024-q4-batch-001",
+  "network_id": "mainnet",
+  "sender_public_key": "B62qiy32p8kAKnny8ZFwoMhYpBppM1DWVohmZxaonPkdzDoBVNp6X6",
+  "payments": [
+    {
+      "nonce": 100,
+      "receiver": "B62qre3erTHfzQckNuibViWQGyyKwZseztqrjPZBv6SQF384Rg6ESAy",
+      "amount": "100000000000",
+      "fee": "1000000",
+      "memo": "Staking reward Q4-2024 slot 1",
+      "valid_until": "4294967295",
+      "signed_payload": "eyJzaWduZWRfcGF5bG9hZF8xMDB9",
+      "external_id": "delegator-A-q4"
+    },
+    {
+      "nonce": 101,
+      "receiver": "B62qmPc8Ziq7txW48YPf4HaXKjZj9nkj4kpqSZwafXBKxKQpfGcZ2Mx",
+      "amount": "75000000000",
+      "fee": "1000000",
+      "memo": "Staking reward Q4-2024 slot 2",
+      "valid_until": "4294967295",
+      "signed_payload": "eyJzaWduZWRfcGF5bG9hZF8xMDF9",
+      "external_id": "delegator-B-q4"
+    },
+    {
+      "nonce": 102,
+      "receiver": "B62qjoDXHMiFFaVeNwFfa4t2G9b5uDKsLyMLXFnvDQQcpmMrGxiTJAj",
+      "amount": "50000000000",
+      "fee": "1000000",
+      "memo": "Staking reward Q4-2024 slot 3",
+      "valid_until": "4294967295",
+      "signed_payload": "eyJzaWduZWRfcGF5bG9hZF8xMDJ9",
+      "external_id": "delegator-C-q4"
+    },
+    {
+      "nonce": 103,
+      "receiver": "B62qoG5Yk4iVxpyczUrBNpwtx2xunhL48dydN53A2VjoRwF8NUTbVr4",
+      "amount": "200000000000",
+      "fee": "1000000",
+      "memo": "Staking reward Q4-2024 slot 4",
+      "valid_until": "4294967295",
+      "signed_payload": "eyJzaWduZWRfcGF5bG9hZF8xMDN9",
+      "external_id": "delegator-D-q4"
+    },
+    {
+      "nonce": 104,
+      "receiver": "B62qq8PjFH5BXCJSGWbMJx9JNBqe3VnBggUYVBF5Ev3h5q2BNKiUuYj",
+      "amount": "125000000000",
+      "fee": "1000000",
+      "memo": "Staking reward Q4-2024 slot 5",
+      "valid_until": "4294967295",
+      "signed_payload": "eyJzaWduZWRfcGF5bG9hZF8xMDR9",
+      "external_id": "delegator-E-q4"
+    }
+  ]
+}
