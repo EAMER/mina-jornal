@@ -1,0 +1,55 @@
+name: Mina Journal CLI
+
+on:
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "CLI command to run"
+        required: true
+        type: choice
+        options:
+          - import-batch
+          - run
+          - status
+          - report
+          - demo
+      batch_id:
+        description: "Batch ID (if applicable)"
+        required: false
+      extra_args:
+        description: "Extra CLI arguments (optional)"
+        required: false
+
+jobs:
+  run-cli:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install nothing (stdlib only)
+        run: echo "No dependencies to install"
+
+      - name: Run CLI command
+        env:
+          MINA_JOURNAL_PATH: mina_journal.db
+          MINA_NODE_MOCK: "1"
+        run: |
+          if [ "${{ inputs.command }}" = "demo" ]; then
+            python3 demo_crash_recovery.py
+          else
+            python3 src/mina_journal.py ${{ inputs.command }} ${{ inputs.batch_id }} ${{ inputs.extra_args }}
+          fi
+
+      - name: Upload report if exists
+        uses: actions/upload-artifact@v4
+        with:
+          name: settlement-report
+          path: report.json
+          if-no-files-found: ignore
